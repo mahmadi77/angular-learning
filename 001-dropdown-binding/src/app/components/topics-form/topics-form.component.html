@@ -1,0 +1,7 @@
+<form action="">
+    <select name="topic-select" [(ngModel)]="selectedTopic">
+        <option [value]="emptyOption">Select</option>
+        <option *ngFor="let topic of topics" [ngValue]="topic">{{topic.Name}}</option>
+    </select>
+    <h2 *ngIf="selectedTopic !== undefined"><a [href]="selectedTopic.Url">{{selectedTopic.Url}}</a></h2>
+</form>
